@@ -1,5 +1,6 @@
 <?php
-echo '<script>';
-echo 'console.log("IT WORKS");';
-echo '</script>';
+$myVariable = "Hello, World!";
+$serverName = "localhost";
+$userName = "admin1";
+echo "<h1>$myVariable</h1>";
 ?>

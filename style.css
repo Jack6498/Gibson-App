@@ -14,7 +14,7 @@ body {
 
 }
 
-.sign_in {
+.main {
   min-height: 500px;
   max-height: 1500px;
   background-color: white;
@@ -35,15 +35,17 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 8px;
 }
-.sign_in h5{
-  width:100%;
+.main h5{
+  font-size:.9em;
+
   text-align: center;
-  margin:20px 0;
+  margin: 20px 0px;
+  padding:0;
   color: #3090ff;
   font-weight:550;
   /* text-decoration: underline; */
   cursor:grab;
-  font-size:.9em
+
 }
 .left {
   width: 50%;
@@ -89,10 +91,9 @@ body {
 }
 
 .choices li {
-  background-color: whitesmoke;
+  background-color: white;
   color: #002D62;
   margin: 0;
-  border: none;
   padding-block: 0px;
   padding-inline: 0px;
   list-style: none;
@@ -100,7 +101,13 @@ body {
   text-align: center;
   height: 40px;
   line-height: 40px;
+  box-sizing:border-box;
+  border:none;
 
+}
+.choices{
+  border: 2px solid rgb(189, 189, 189);
+  border-radius:4px;
 }
 #choices_header{
   margin:20px 0px 10px 0;
@@ -120,11 +127,11 @@ body {
 }
 
 #parent {
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 3px 0px 0px 3px;
 }
 
 #admin {
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 3px 3px 0px;
 }
 
 .Title {

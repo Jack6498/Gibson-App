@@ -1,9 +1,7 @@
 //Startup code
 document.getElementById('create_acc').style.display = 'none';
 document.getElementById('log_in').style.display = 'flex'
-const LogInButton = document.getElementById('log_in_button').addEventListener('click', ()=> {ProcessLogin()})
 
-  const SignUpButton = document.getElementById('sign_up_button').addEventListener('click', ()=> {ProcessSignUp()})
 
 
 //Code for role selection
@@ -19,22 +17,34 @@ choices.querySelectorAll('li').forEach(li => {
     li.classList.add('selected');
   });
 });
-
-
-
-  //send data to server and check if it matches any existing users 
-  function ProcessLogin() {
-  var email = document.getElementbyId('email').getInnerText();
-  var pass = document.getElementbyId('password').getInnerText();
+//send data to server and check if it matches any existing users 
+function ProcessLogin() {
   //where I put my php function
+  var meetsRequirements = true;
+  var password = document.getElementById('password').innerHTML;
+  var email = document.getElementById('email').innerHTML;
+  if (meetsRequirements) {
+    window.location.href = "Dashboard/dashboard.html";
+  }
 }
 
-  //Add new user to data base
-  function ProcessSignUp() {
-  var newEmail = document.getElementbyId('username').getInnerText();
-  var newPass = document.getElementbyId('newEmail').getInnerText();
-  var newName = document.getElementbyId('full_name').getInngerText();
-  //put more php magic here  
+//Add new user to data base
+//Broken i think
+function ProcessSignUp() {
+  //where I put my php function
+  console.log("sign up")
+  var meetsRequirements = true;
+  var password = document.getElementById('newPassword').innerHTML;
+  var confirmation = document.getElementById('confirmPassword').innerHTML;
+  var newEmail = document.getElementById('newEmail').innerHTML;
+  if (password == confirmation){
+    if (meetsRequirements) {
+      //probably need to show a verification prompt
+    window.location.href = "Dashboard/dashboard.html";
+  }else{
+      alert("Passwords must match")
+  }
+  }
 }
 
 
@@ -54,17 +64,17 @@ Sign_In_Button.addEventListener('click', () => {
 
 
 document.getElementById("runPHPButton").addEventListener("click", function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "testing.php", true);
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "phpFunctions/testing.php", true);
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var resultContainer = document.getElementById("resultContainer");
-            resultContainer.innerHTML = xhr.responseText;
-        }
-    };
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      var resultContainer = document.getElementById("resultContainer");
+      resultContainer.innerHTML = xhr.responseText;
+    }
+  };
 
-    xhr.send();
+  xhr.send();
 });
 
 

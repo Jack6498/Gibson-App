@@ -1,3 +1,11 @@
 1. Add mobile Support (i.e. make it look different if the aspect ratio is 3:4 or more for example )
 2. dashboard
 3. Data Entry
+4. Forgot Password - Caden also work on
+5. Email Verification - Caden gonna work on
+6. Password Requirement ( 8 characters, 1 number, 1 letter, 1 capital, 1 symbol etc.)
+7. Add second password blank on signup and check in js if the 2 blanks are the same
+8. Add search bar for school on sign Up (Will need some data base)
+
+
+

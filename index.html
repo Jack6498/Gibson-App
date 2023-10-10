@@ -10,7 +10,7 @@
 
 <body>
 
-  <div class="sign_in" id="log_in">
+  <div class="main" id="log_in">
     <div class="left">
       <img src="/images/signInBackground.png" alt="img" class="leftImage" />
     </div>
@@ -22,24 +22,25 @@
         <div class="inputContainer">
           <form class="inputs">
             <label for="email">Email</label>
-            <input required type="email" placeholder="example@domain.com" id='email' />
+            <input required type="email" placeholder="example@domain.com" id="email" />
             <label for="password">Password</label>
-            <input required type="text" placeholder="password" id='password' />
+            <input required type="text" placeholder="password" id="password" />
             <div id="rememberLogin">
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div>
-            <button type="submit" id ="log_in_button" class="SubmitButton">Sign in</button>
+            <button id="log_in_button" class="SubmitButton" onclick="ProcessLogin()">Sign in</button>
+            <h5>Forgot Your Password?</h5>
           </form>
 
-          
-            <button id="runPHPButton">Run PHP</button>
-             <div id="resultContainer">Does it work?</div>
+
+          <button id="runPHPButton">Run PHP</button>
+          <div id="resultContainer"></div>
 
 
 
         </div>
-        <h5>Forgot Your Password?</h5>
+
       </div>
     </div>
   </div>
@@ -49,7 +50,7 @@
 
 
 
-  <div class="sign_in" id="create_acc">
+  <div class="main" id="create_acc">
     <div id="left">
       <img src="/images/signInBackground.png" alt="img" class="leftImage" />
     </div>
@@ -68,17 +69,19 @@
 
         <div class="inputContainer">
           <form class="inputs">
-            <label for="username">Full Name</label>
-            <input required type="text" placeholder="First Last" id='full_name' />        
-            <label for="email">Email</label>
+            <label for="full_name">Full Name</label>
+            <input required type="text" placeholder="First Last" id='full_name' />
+            <label for="newEmail">Email</label>
             <input required type="email" placeholder="example@domain.com" id='newEmail' />
-            <label for="password">Password</label>
-            <input required type="text" placeholder="password" id='password' />
+            <label for="newPassword">Password</label>
+            <input required type="text" placeholder="password" id='newPassword' />
+            <label for="confirmPassword">Confirm Password</label>
+            <input required type="text" placeholder="password" id='confirmPassword' />
             <!-- <div id="rememberLogin">
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div> -->
-            <button type="submit" id="sign_up_button" class="SubmitButton">Sign up</button>  
+            <button type="submit" id="sign_up_button" class="SubmitButton" onclick="ProcessSignUp()">Sign up</button>
           </form>
         </div>
       </div>

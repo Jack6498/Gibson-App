@@ -20,7 +20,7 @@
         <h4 class="Subtitle">Don't have an account? <span id="load_create_acc">Sign Up</span></h4>
 
         <div class="inputContainer">
-          <form class="inputs">
+          <form class="inputs" action="checkLoginCreds.php" method="post">
             <label for="email">Email</label>
             <input required type="email" placeholder="example@domain.com" id="email" />
             <label for="password">Password</label>
@@ -29,18 +29,11 @@
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div>
-            <button id="log_in_button" class="SubmitButton" onclick="ProcessLogin()">Sign in</button>
+            <button type="button" id="log_in_button" class="SubmitButton" onclick="ProcessLogin()">Sign in</button>
             <h5>Forgot Your Password?</h5>
           </form>
-
-
-          <button id="runPHPButton">Run PHP</button>
-          <div id="resultContainer"></div>
-
-
-
+          
         </div>
-
       </div>
     </div>
   </div>
@@ -68,20 +61,20 @@
         </div>
 
         <div class="inputContainer">
-          <form class="inputs">
+          <form class="inputs" action="submitLoginCreds.php" method="post">
             <label for="full_name">Full Name</label>
-            <input required type="text" placeholder="First Last" id='full_name' />
+            <input required type="text" placeholder="First Last" id='full_name' name="fullName"/>
             <label for="newEmail">Email</label>
-            <input required type="email" placeholder="example@domain.com" id='newEmail' />
+            <input required type="email" placeholder="example@domain.com" id='newEmail' name="newEmail"/>
             <label for="newPassword">Password</label>
-            <input required type="text" placeholder="password" id='newPassword' />
+            <input required type="text" placeholder="password" id='newPassword' name="newPassword"/>
             <label for="confirmPassword">Confirm Password</label>
-            <input required type="text" placeholder="password" id='confirmPassword' />
+            <input required type="text" placeholder="password" id='confirmPassword'/>
             <!-- <div id="rememberLogin">
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div> -->
-            <button type="submit" id="sign_up_button" class="SubmitButton" onclick="ProcessSignUp()">Sign up</button>
+            <button type="button" id="sign_up_button" class="SubmitButton" onclick="ProcessSignUp()">Sign up</button>
           </form>
         </div>
       </div>

@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 
 // SQL query to insert user data into a table (e.g., users)
-$sql = "INSERT INTO `userInfo`(`email`, `username`, `pwd`, `type`) VALUES ('$newEmail','$fullName','$newPassword','teacher')"
+$sql = "INSERT INTO `userInfo`(`email`, `username`, `pwd`, `type`) VALUES ('$newEmail','$fullName','$newPassword','teacher')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

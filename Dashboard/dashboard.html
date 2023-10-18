@@ -9,23 +9,26 @@
   <link href="dashboard.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="">
   <!--bar at top of screen-->
   <div id="top-bar">
     <!--logo on top left corner -->
     <a href="../index.html">
       <img src="" id="log" />
     </a>
-    <h1>Dashboard</h1>
+    <h1 id="title">Dashboard</h1>
     <!-- avatar/user settings menu on top right corner -->
-    <a>
-      <img src='' id='avatar' />
+    <a id="avatar">
+      <img src='' id='profilePic' />
     </a>
   </div>
   <div class="main">
-    <h2 id="grid-title">Lessons</h2>
+    <div id="grid-title">
+      <h2 id="">Lessons</h2>
+      <a href="entry/entry.html" id="addNew"><img src="../images/plus.png" alt="Create new" width="512" height="512" id="plus"></a>
+    </div>
     <div id="lessonGrid">
-      <div id="dataEntryTest" />
+      <div id="dataEntryTest"></div>
     </div>
   </div>
 </body>

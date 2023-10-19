@@ -1,6 +1,6 @@
 <?php
  class Management{
-    private $servername = "192.185.16.86";
+    private $servername = "localhost";
     private $DBusername = "wcsccsco_logit_admin";
     private $DBpassword = "Echo#Co-op18!";
     private $database = "wcsccsco_logit";
@@ -34,5 +34,6 @@
             return true;
         }
     }
+    
 }
 ?>

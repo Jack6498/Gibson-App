@@ -20,7 +20,7 @@
         <h4 class="Subtitle">Don't have an account? <span id="load_create_acc">Sign Up</span></h4>
 
         <div class="inputContainer">
-          <form class="inputs" action="checkLoginCreds.php" method="post">
+          <form class="inputs" action="submitLoginCreds.php" method="post">
             <label for="email">Email</label>
             <input required type="email" name="email" placeholder="example@domain.com" id="email" />
             <label for="password">Password</label>
@@ -29,7 +29,7 @@
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div>
-            <button type="button" id="log_in_button" class="SubmitButton" onclick="ProcessLogin()">Sign in</button>
+            <button type="submit" id="log_in_button" class="SubmitButton">Sign in</button>
             <h5>Forgot Your Password?</h5>
           </form>
           
@@ -69,13 +69,12 @@
               <input type="checkbox" id="remember" />
               <label for="remember">Remember Login</label>
             </div> -->
-            <button type="button" id="sign_up_button" class="SubmitButton" onclick="ProcessSignUp()">Sign up</button>
+            <input type="submit" id="sign_up_button" class="SubmitButton">Sign up</input>
           </form>
         </div>
       </div>
     </div>
   </div>
-
 </body>
 <script src="script.js"></script>
 

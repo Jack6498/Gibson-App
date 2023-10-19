@@ -1,0 +1,6 @@
+open ftp.wcsc-cs.com
+TESTA9MS
+test11
+binary
+put C:\Users\312755\Downloads\Gibson-App-main\Gibson-App.zip
+quit

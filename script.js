@@ -18,18 +18,7 @@ choices.querySelectorAll('li').forEach(li => {
   });
 });
 //send data to server and check if it matches any existing users 
-function ProcessLogin() {
-  //where I put my php function
-  console.log("ran processLogin")
-  //meets requirements should make sure email is <= 320 characters, the password is <=64 and the name is <= 256
-  var meetsRequirements = true;
-  var password = document.getElementById('password').value;
-  var email = document.getElementById('email').value;
-  if (meetsRequirements) {
-    console.log("in the if")
-    window.location.href = "Dashboard/dashboard.html";
-  }
-}
+
 
 //Add new user to data base
 //Broken i think
